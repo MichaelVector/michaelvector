@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.0.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"michaelvector.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="刚开始安装的Ubuntu各种不顺手，Gnome界面也是非常难看，本文介绍从刚安装完Ubuntu 19.10后，需要开始做的几个步骤来初始化顺手好看的系统。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu 19.10 安装完该做的几件事">
+<meta property="og:url" content="https://michaelvector.github.io/posts/221d075/index.html">
+<meta property="og:site_name" content="Michael Vector">
+<meta property="og:description" content="刚开始安装的Ubuntu各种不顺手，Gnome界面也是非常难看，本文介绍从刚安装完Ubuntu 19.10后，需要开始做的几个步骤来初始化顺手好看的系统。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-25T12:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-20T07:41:43.000Z">
+<meta property="article:author" content="Vector">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="ubuntu">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://michaelvector.github.io/posts/221d075/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://michaelvector.github.io/posts/221d075/","path":"posts/221d075/","title":"Ubuntu 19.10 安装完该做的几件事"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Ubuntu 19.10 安装完该做的几件事 | Michael Vector</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Michael Vector</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">静心养神的空间，自我陶醉的庙宇</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85oh-my-zsh"><span class="nav-number">1.</span> <span class="nav-text">安装oh-my-zsh</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zsh%E6%8F%92%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">zsh插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4zsh%E4%B8%BB%E9%A2%98"><span class="nav-number">1.3.</span> <span class="nav-text">修改默认zsh主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%A4%B4%E9%83%A8%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="nav-number">1.4.</span> <span class="nav-text">修改头部用户信息</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%BA%90"><span class="nav-number">2.</span> <span class="nav-text">更新系统与源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95"><span class="nav-number">3.</span> <span class="nav-text">安装扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Gnome%E4%BC%98%E5%8C%96%E5%B7%A5%E5%85%B7"><span class="nav-number">3.1.</span> <span class="nav-text">安装Gnome优化工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEGnome%E6%89%A9%E5%B1%95"><span class="nav-number">3.2.</span> <span class="nav-text">配置Gnome扩展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E6%89%A9%E5%B1%95"><span class="nav-number">3.3.</span> <span class="nav-text">推荐扩展</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%BE%AE%E8%B0%83"><span class="nav-number">4.</span> <span class="nav-text">系统微调</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Vector</p>
+  <div class="site-description" itemprop="description">Vector的个人主页，存放知识文档、实践教程、学术之类的知识。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://michaelvector.github.io/posts/221d075/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Vector">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Michael Vector">
+      <meta itemprop="description" content="Vector的个人主页，存放知识文档、实践教程、学术之类的知识。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Ubuntu 19.10 安装完该做的几件事 | Michael Vector">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Ubuntu 19.10 安装完该做的几件事
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-03-25 20:00:00" itemprop="dateCreated datePublished" datetime="2020-03-25T20:00:00+08:00">2020-03-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-20 15:41:43" itemprop="dateModified" datetime="2022-03-20T15:41:43+08:00">2022-03-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>刚开始安装的<strong>Ubuntu</strong>各种不顺手，Gnome界面也是非常难看，本文介绍从刚安装完<strong>Ubuntu 19.10</strong>后，需要开始做的几个步骤来初始化顺手好看的系统。</p>
+<span id="more"></span>
+
+<h1 id="安装oh-my-zsh"><a href="#安装oh-my-zsh" class="headerlink" title="安装oh-my-zsh"></a>安装oh-my-zsh</h1><p><strong>Linux&#x2F;Unix</strong>提供了很多种的Shell，但是为什么要存在这么多的Shell。其实这就像你的同一种类型的衣服有不同的款式一般。记得有一个评论家说的，程序员就是负责把复杂的事情搞简单，然后再把简单的事情搞复杂，<strong>Linux</strong>真的是完全体现了这一点的精髓。一个功能可以使用各种软件包实现，每个软件包也有各种版本。所以，程序员真的十分喜欢<strong>Linux</strong>。但普通人对此就只能表示呵呵了。</p>
+<p>很多程序员看到不爽的Shell，心情一好，顺手就写了一个符合自己心意的。开源社区游一圈，其他的程序员觉得这个新的Shell看起来还不错，而且自己对他还有点新想法。然后写一段代码Push。慢慢的就行成了一些新的标准。但是Shell的种类也越来越多了。</p>
+<p>常用的Shell有以下几类：<strong>Bourne shell</strong>、<strong>C shell</strong>、<strong>Korn shell</strong>。</p>
+<p>上图中的就是<strong>Ubuntu</strong>及其衍生版本自带的Shell，名字是<strong>bash</strong>，文件路径位<code>/usr/bin/bash</code>。<strong>bash</strong>是<strong>GNU</strong>计划编写的Unix Shell。他的名称是<strong>Bourne-Again Shell</strong>的首字母缩写。由布莱恩·福克斯创造。Bash同时也是很多<strong>Linux</strong>发行版本的默认命令行Shell。<strong>Bash</strong>优点在于和系统的集成化程度比较高，对于很多操作错误都有比较完善的提示。</p>
+<blockquote>
+<p>注：Shell分为图形界面Shell和命令行界面Shell，这里只讨论命令行界面Shell。</p>
+</blockquote>
+<p><code>oh my zsh</code>是对zsh的强化。zsh是一款功能强大的Shell终端软件，既可以作为一个交互式终端，也可以作为一个脚本解释器。它在兼容<strong>Bash</strong>的同时（默认不兼容，除非设置成emulate sh）还有很多的改进，这里不多做解释，有兴趣的可以查阅zsh的wiki。同时zsh还是OSX的默认命令行Shell。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>首先安装几个包：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install zsh git curl</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后用命令安装<code>oh-my-zsh</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot;</span></span><br></pre></td></tr></table></figure>
+<p>或者，可以从源中更方便的安装，只不过更新速度不如以上方式。<br>Ubuntu及其衍生版本软件源中就有zsh。我们只需要使用apt命令安装它就可以了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install zsh</span><br></pre></td></tr></table></figure>
+
+<h2 id="zsh插件"><a href="#zsh插件" class="headerlink" title="zsh插件"></a>zsh插件</h2><p>建议，还可以安装几个oh-my-zsh的<code>自动完成</code>、<code>建议</code>以及<code>语法高亮</code>插件，可以极大的增加输入效率。</p>
+<figure class="highlight js"><figcaption><span>.oh-my-zsh/plugins</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd .<span class="property">oh</span>-my-zsh/plugins</span><br><span class="line">git clone <span class="attr">https</span>:<span class="comment">//github.com/zsh-users/zsh-autosuggestions</span></span><br><span class="line">git clone <span class="attr">https</span>:<span class="comment">//github.com/zsh-users/zsh-syntax-highlighting.git</span></span><br><span class="line">git clone <span class="attr">https</span>:<span class="comment">//github.com/zsh-users/zsh-completions</span></span><br></pre></td></tr></table></figure>
+
+<p>将这几个包克隆完之后，需要打开.zshrc配置文件，然后在配置文件中添加这几个插件。</p>
+<figure class="highlight js"><figcaption><span>home/.zshrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plugins=(git zsh-autosuggestions  zsh-syntax-highlighting zsh-completions)</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改默认zsh主题"><a href="#修改默认zsh主题" class="headerlink" title="修改默认zsh主题"></a>修改默认zsh主题</h2><figure class="highlight php"><figcaption><span>user/.zshrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=<span class="string">&quot;agnoster&quot;</span></span><br></pre></td></tr></table></figure>
+<div class="note info"><p><strong>注意</strong>：此主题一些编码问题会造成乱码，安装<code>powerline</code>相关的字体可解决修复。</p>
+</div>
+
+<h2 id="修改头部用户信息"><a href="#修改头部用户信息" class="headerlink" title="修改头部用户信息"></a>修改头部用户信息</h2><p>信息修改在自定义的主题里面，此处以我用的<code>agnoster.zsh-theme</code>为例。</p>
+<figure class="highlight js"><figcaption><span>/home/vector/.oh-my-zsh/themes/agnoster.zsh-theme</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#prompt_segment black <span class="keyword">default</span> <span class="string">&quot;%(!.%&#123;%F&#123;yellow&#125;%&#125;.)%n@%m&quot;</span>  <span class="comment">//注释掉</span></span><br><span class="line">prompt_segment black <span class="keyword">default</span> <span class="string">&quot;%(!.%&#123;%F&#123;yellow&#125;%&#125;.)Vector&quot;</span></span><br></pre></td></tr></table></figure>
+
+<div class="note info"><p><strong>%n@%m</strong> 是原本的默认名字，**%n<strong>是用户名，</strong>%m**是本机名。</p>
+</div>
+
+<h1 id="更新系统与源"><a href="#更新系统与源" class="headerlink" title="更新系统与源"></a>更新系统与源</h1><p>为了让软件下载与系统更新更快点，推荐将更新源改为国内的更新源。这里推荐使用阿里云的更新源。</p>
+<p>阿里云更新源</p>
+<figure class="highlight js"><figcaption><span>18.04版本 - bionic</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span></span><br><span class="line">deb <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span></span><br><span class="line">deb <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span></span><br><span class="line">deb <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span></span><br><span class="line">deb <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span></span><br><span class="line">deb-src <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span></span><br><span class="line">deb-src <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span></span><br><span class="line">deb-src <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span></span><br><span class="line">deb-src <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span></span><br><span class="line">deb-src <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><figcaption><span>19.10版本 - eoan</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">deb <span class="attr">http</span>:<span class="comment">//archive.canonical.com/ubuntu xenial partner</span></span><br><span class="line">deb-src <span class="attr">http</span>:<span class="comment">//archive.canonical.com/ubuntu xenial partner</span></span><br><span class="line">deb <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ eoan main universe restricted multiverse</span></span><br><span class="line">deb <span class="attr">http</span>:<span class="comment">//security.ubuntu.com/ubuntu/ eoan-security main universe restricted multiverse</span></span><br><span class="line">deb <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ eoan-updates main universe restricted multiverse</span></span><br><span class="line">deb <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ eoan-backports main universe restricted multiverse</span></span><br><span class="line">deb-src <span class="attr">http</span>:<span class="comment">//mirrors.aliyun.com/ubuntu/ eoan main universe restricted multiverse</span></span><br></pre></td></tr></table></figure>
+
+<p>更换方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+
+<p>将文件的内容替换为阿里云的更新源<code>:wq</code>保存</p>
+<p>进行系统更新</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装扩展"><a href="#安装扩展" class="headerlink" title="安装扩展"></a>安装扩展</h1><h2 id="安装Gnome优化工具"><a href="#安装Gnome优化工具" class="headerlink" title="安装Gnome优化工具"></a>安装Gnome优化工具</h2><p>在 Ubuntu 19.10 系统安装好之后强烈推荐大家安装 Tweaks 应用程序，该应用程序可以将系统隐藏的设置选项解锁，从而可以更好地控制 Ubuntu 和 GNOME 桌面的行为方式。</p>
+<p>Tweaks 实用程序提供了比标准设置应用程序中列出更广泛的设置选项，包括：</p>
+<ul>
+<li>更改 GTK 和图标主题</li>
+<li>将窗口按钮左移</li>
+<li>更改桌面字体大小</li>
+<li>拖动到屏幕边缘时平铺窗口</li>
+<li>在顶部条形时钟显示当前工作日</li>
+</ul>
+<p>对于 Ubuntu 而言，Tweaks 是一款名副其实的瑞士军刀</p>
+<figure class="highlight js"><figcaption><span>安装gnome-tweak</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gnome-tweak-tool</span><br></pre></td></tr></table></figure>
+
+<p>安装完成之后可以从终端输入<code>gnome-tweak-tool</code>打开，也可以从软件列表寻找 <code>工具-&gt;优化</code> 来打开。</p>
+<h2 id="配置Gnome扩展"><a href="#配置Gnome扩展" class="headerlink" title="配置Gnome扩展"></a>配置Gnome扩展</h2><p>首先安装浏览器插件，从这里寻找你的浏览器版本，然后安装即可。然后使用下面的命令安装后台服务。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install chrome-gnome-shell</span><br></pre></td></tr></table></figure>
+
+<p>安装完毕之后打开<a target="_blank" rel="noopener" href="https://extensions.gnome.org/"><strong>Gnome扩展网站</strong></a>，可以发现现在这个网站上面的扩展都会多出一个开关，点击这个开关即可直接将扩展安装到系统中。我比较喜欢Dash to Dock这个插件，比Gnome默认的Dock好用。</p>
+<h2 id="推荐扩展"><a href="#推荐扩展" class="headerlink" title="推荐扩展"></a>推荐扩展</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/307/dash-to-dock/">Dash to Dock</a></li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/744/hide-activities-button/">Hide Activities Button</a></li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/2141/horizontal-workspaces/">Horizontal workspaces</a></li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/104/netspeed/">NetSpeed</a></li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/723/pixel-saver/">Pixel Saver</a></li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/800/remove-dropdown-arrows/">Remove Dropdown Arrows</a></li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/19/user-themes/">User Themes</a></li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1460/vitals/">Vitals</a></li>
+</ul>
+<h1 id="系统微调"><a href="#系统微调" class="headerlink" title="系统微调"></a>系统微调</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install ttf-mscorefonts-installer    <span class="comment">//安装微软字体</span></span><br><span class="line">timedatectl set-local-rtc <span class="number">1</span> --adjust-system-clock    <span class="comment">//调整时区和windows一致</span></span><br><span class="line">sudo apt-get install fonts-wqy-zenhei    <span class="comment">//文泉驿点阵正黑字体 </span></span><br><span class="line">sudo apt-get install ubuntu-restricted-extras    <span class="comment">//安装ubuntu受限的额外的解码器</span></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/d12e6791/" rel="prev" title="Hexo博客搭建教程《6、多终端同步配置》">
+                  <i class="fa fa-angle-left"></i> Hexo博客搭建教程《6、多终端同步配置》
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/3b4dd97/" rel="next" title="Linux升级内核的正确姿势">
+                  Linux升级内核的正确姿势 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Vector</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

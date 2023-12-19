@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.0.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"michaelvector.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="本文针对于功能性做了一些优化和建议。包括：  多线部署（Github 和 Coding Page） 博客文章链接优化 百度URL主动推送（搜索） 添加评论功能 SEO优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客搭建教程《四、功能强化》">
+<meta property="og:url" content="https://michaelvector.github.io/posts/313ccf89/index.html">
+<meta property="og:site_name" content="Michael Vector">
+<meta property="og:description" content="本文针对于功能性做了一些优化和建议。包括：  多线部署（Github 和 Coding Page） 博客文章链接优化 百度URL主动推送（搜索） 添加评论功能 SEO优化">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-10T12:00:00.000Z">
+<meta property="article:modified_time" content="2022-02-03T07:03:04.000Z">
+<meta property="article:author" content="Vector">
+<meta property="article:tag" content="博客">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://michaelvector.github.io/posts/313ccf89/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://michaelvector.github.io/posts/313ccf89/","path":"posts/313ccf89/","title":"Hexo博客搭建教程《四、功能强化》"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hexo博客搭建教程《四、功能强化》 | Michael Vector</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Michael Vector</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">静心养神的空间，自我陶醉的庙宇</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E9%83%A8%E7%BD%B2"><span class="nav-number">1.</span> <span class="nav-text">多线部署</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E9%93%BE%E6%8E%A5%E4%BC%98%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">博客文章链接优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E7%BD%91%E5%9D%80%E9%93%BE%E6%8E%A5-URL-%E5%94%AF%E4%B8%80%E4%B8%94%E6%B0%B8%E4%B9%85%E5%8C%96"><span class="nav-number">2.1.</span> <span class="nav-text">博客网址链接 URL 唯一且永久化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo-abbrlink"><span class="nav-number">2.2.</span> <span class="nav-text">安装hexo-abbrlink</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.3.</span> <span class="nav-text">修改配置文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6URL%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%EF%BC%88%E6%90%9C%E7%B4%A2%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">百度URL主动推送（搜索）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E7%A7%8D%E6%96%B9%E5%BC%8F%E5%AF%B9%E6%AF%94"><span class="nav-number">3.1.</span> <span class="nav-text">四种方式对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">主动推送（推荐）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81"><span class="nav-number">3.3.</span> <span class="nav-text">自动推送</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sitemap"><span class="nav-number">3.4.</span> <span class="nav-text">sitemap</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Vector</p>
+  <div class="site-description" itemprop="description">Vector的个人主页，存放知识文档、实践教程、学术之类的知识。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://michaelvector.github.io/posts/313ccf89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Vector">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Michael Vector">
+      <meta itemprop="description" content="Vector的个人主页，存放知识文档、实践教程、学术之类的知识。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Hexo博客搭建教程《四、功能强化》 | Michael Vector">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo博客搭建教程《四、功能强化》
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-03-10 20:00:00" itemprop="dateCreated datePublished" datetime="2020-03-10T20:00:00+08:00">2020-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-02-03 15:03:04" itemprop="dateModified" datetime="2022-02-03T15:03:04+08:00">2022-02-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>本文针对于功能性做了一些优化和建议。包括：</p>
+<ul>
+<li>多线部署（Github 和 Coding Page）</li>
+<li>博客文章链接优化</li>
+<li>百度URL主动推送（搜索）</li>
+<li>添加评论功能</li>
+<li>SEO优化</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="多线部署"><a href="#多线部署" class="headerlink" title="多线部署"></a>多线部署</h1><p>由于众所周知的原因，在Github Page上的网页在国内的网速并不是很好。所以很多人都会在国内同样部署（码云、Coding Page），这样一来有多个Git文档需要同步，怎么操作呢？</p>
+<figure class="highlight yml"><figcaption><span>hexoblog/</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> </span><br><span class="line">      <span class="attr">coding:</span> <span class="string">https://e.coding.net/vectorcode/vector.git</span></span><br><span class="line">      <span class="comment"># github: https://github.com/MichaelVector/michaelvector.github.io.git</span></span><br><span class="line">      <span class="comment"># gitee: https://gitee.com/michaelvector/michaelvector.git</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<h1 id="博客文章链接优化"><a href="#博客文章链接优化" class="headerlink" title="博客文章链接优化"></a>博客文章链接优化</h1><h2 id="博客网址链接-URL-唯一且永久化"><a href="#博客网址链接-URL-唯一且永久化" class="headerlink" title="博客网址链接 URL 唯一且永久化"></a>博客网址链接 URL 唯一且永久化</h2><p>使用插件 <a target="_blank" rel="noopener" href="https://github.com/rozbo/hexo-abbrlink"><strong>hexo-abbrlink</strong></a>可以做到自定义文章链接，而且没有年月日等多级目录，SEO搜索也方便很多。</p>
+<h2 id="安装hexo-abbrlink"><a href="#安装hexo-abbrlink" class="headerlink" title="安装hexo-abbrlink"></a>安装hexo-abbrlink</h2><figure class="highlight py"><figcaption><span>代码</span><a target="_blank" rel="noopener" href="https://github.com/rozbo/hexo-abbrlink">官方链接</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">posts/:abbrlink/</span></span><br><span class="line"><span class="attr">abbrlink:</span> <span class="comment">#abbrlink配置</span></span><br><span class="line">  <span class="attr">alg:</span> <span class="string">crc32</span>  <span class="comment"># 算法：crc16(default) and crc32</span></span><br><span class="line">  <span class="attr">rep:</span> <span class="string">dec</span>    <span class="comment"># 进制：dec(default) and hex</span></span><br></pre></td></tr></table></figure>
+
+<p> 样例</p>
+<figure class="highlight yml"><figcaption><span>代码效果</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#crc16 &amp; hex</span></span><br><span class="line"><span class="string">https://post.zz173.com/posts/66c8.html</span></span><br><span class="line"><span class="comment">#crc16 &amp; dec</span></span><br><span class="line"><span class="string">https://post.zz173.com/posts/65535.html</span></span><br><span class="line"><span class="comment">#crc32 &amp; hex</span></span><br><span class="line"><span class="string">https://post.zz173.com/posts/8ddf18fb.html</span></span><br><span class="line"><span class="comment">#crc32 &amp; dec</span></span><br><span class="line"><span class="string">https://post.zz173.com/posts/1690090958.html</span></span><br></pre></td></tr></table></figure>
+
+<p>这样就确保了博文链接的唯一化，只要不修改md文件的abbrlink的值，URL就永久不会改变。<br>如此 md 文件名和文件内容也可以随便改了。这样也有利于 SEO 优化。</p>
+<h1 id="百度URL主动推送（搜索）"><a href="#百度URL主动推送（搜索）" class="headerlink" title="百度URL主动推送（搜索）"></a>百度URL主动推送（搜索）</h1><p>主动推送Hexo博客新链接至百度搜索引擎，解决百度爬虫被禁止访问的问题，提升网站收录质量和速度。</p>
+<blockquote>
+<p>SEO是由英文Search Engine Optimization缩写而来， 中文意译为“搜索引擎优化”。SEO是指通过站内优化比如网站结构调整、网站内容建设、网站代码优化等以及站外优化。</p>
+</blockquote>
+<h2 id="四种方式对比"><a href="#四种方式对比" class="headerlink" title="四种方式对比"></a>四种方式对比</h2><ul>
+<li><strong>主动推送</strong>：最为快速的提交方式，推荐您将站点当天新产出链接立即通过此方式推送给百度，以保证新链接可以及时被百度收录</li>
+<li><strong>自动推送</strong>：是轻量级链接提交组件，将自动推送的 JS 代码放置在站点每一个页面源代码中，当页面被访问时，页面链接会自动推送给百度，有利于新页面更快被百度发现</li>
+<li><strong>sitemap</strong>：您可以定期将网站链接放到sitemap中，然后将sitemap提交给百度。百度会周期性的抓取检查您提交的sitemap，对其中的链接进行处理，但收录速度慢于主动推送</li>
+<li><strong>手动提交</strong>：如果您不想通过程序提交，那么可以采用此种方式，手动将链接提交给百度</li>
+</ul>
+<p>网站在没有提交搜索引擎收录之前，直接搜索你网站的内容是搜不到的，只有提交搜索引擎之后，搜索引擎才能收录你的站点，通过爬虫抓取你网站的东西，对于 hexo 博客来说，如果你是部署在 GitHub Pages，那么你是无法被百度收录的，因为 GitHub 禁止了百度爬虫，最常见的解决办法是双线部署到 Coding Pages 和 GitHub Pages，因为百度爬虫可以爬取到 Coding 上的内容，从而实现百度收录。另外百度收录的所需的时间较长，大约半个月左右才会看到效果！</p>
+<h2 id="主动推送（推荐）"><a href="#主动推送（推荐）" class="headerlink" title="主动推送（推荐）"></a>主动推送（推荐）</h2><p>在博客根目录安装插件 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
+<p>然后在根目录 _config.yml 文件里写入以下配置：</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span><a target="_blank" rel="noopener" href="https://github.com/huiwang/hexo-baidu-url-submit">官方链接</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">baidu_url_submit:</span></span><br><span class="line">  <span class="attr">count:</span> <span class="number">100</span> <span class="comment"># 提交最新的1000个链接</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">https://vector.today</span> <span class="comment"># 在百度站长平台中注册的域名</span></span><br><span class="line">  <span class="attr">token:</span> <span class="string">XXXXXXX</span> <span class="comment"># 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">baidu_urls.txt</span> <span class="comment"># 文本文档的地址， 新链接会保存在此文本文档里</span></span><br><span class="line"></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">type:</span> <span class="string">baidu_url_submitter</span> <span class="comment"># 默认每次重新部署</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="自动推送"><a href="#自动推送" class="headerlink" title="自动推送"></a>自动推送</h2><p>关于自动推送百度官网给出的解释是：自动推送是百度搜索资源平台为提高站点新增网页发现速度推出的工具，安装自动推送JS代码的网页，在页面被访问时，页面URL将立即被推送给百度。</p>
+<p>此时要注意，有些 hexo 主题集成了这项功能，比如 next 主题，在 <code>themes\next\layout\third-party\baidu-push.swig</code>文件，我们只需要把如下代码粘贴到该文件，然后在主题配置文件设置 <code>baidu_push: true</code> 即可。</p>
+<figure class="highlight js"><figcaption><span>themes\next\layout\third-party\baidu-push.swig</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.<span class="property">baidu_push</span> %&#125;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> bp = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line">    <span class="keyword">var</span> curProtocol = <span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">protocol</span>.<span class="title function_">split</span>(<span class="string">&#x27;:&#x27;</span>)[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">if</span> (curProtocol === <span class="string">&#x27;https&#x27;</span>) &#123;</span><br><span class="line">        bp.<span class="property">src</span> = <span class="string">&#x27;https://zz.bdstatic.com/linksubmit/push.js&#x27;</span>;        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        bp.<span class="property">src</span> = <span class="string">&#x27;http://push.zhanzhang.baidu.com/push.js&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;script&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">    s.<span class="property">parentNode</span>.<span class="title function_">insertBefore</span>(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="sitemap"><a href="#sitemap" class="headerlink" title="sitemap"></a>sitemap</h2><p>首先我们在网页根目录要使用以下命令生成一个网站地图：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>这里也注意一下，将根目录的 <code>_config.yml</code> 文件，URL 改为在百度站长平台添加的域名，也就是你网站的首页地址：</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://vector.today</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br></pre></td></tr></table></figure>
+
+<p>配置如下（在根目录的<code>_config.yml</code>里进行添加）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># hexo sitemap</span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p>然后使用命令 <code>hexo g -d</code> 将网站部署上去，然后访问 <strong>你的首页&#x2F;sitemap.xml</strong> 或者 <strong>你的首页&#x2F;baidusitemap.xml</strong> 就可以看到网站地图了</p>
+<blockquote>
+<p>其中 <em>sitemap.xml</em> 文件是搜索引擎通用的 sitemap 文件，<em>baidusitemap.xml</em> 是百度专用的 sitemap 文件。</p>
+</blockquote>
+<p>然后来到百度站长平台的 sitemap 提交页面，将你的 sitemap 地址提交即可，如果成功的话状态会显示为正常，初次提交要等几分钟，sitemap.xml 相比 baidusitemap.xml 来说等待时间也会更长，如果以后你博客有新的文章或其他页面，可以点击手动更新文件，更新一下新的 sitemap。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"># 博客</a>
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/c186edd8/" rel="prev" title="Hexo博客搭建教程《三、写作技巧》">
+                  <i class="fa fa-angle-left"></i> Hexo博客搭建教程《三、写作技巧》
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/d12e6791/" rel="next" title="Hexo博客搭建教程《6、多终端同步配置》">
+                  Hexo博客搭建教程《6、多终端同步配置》 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Vector</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
