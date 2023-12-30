@@ -13,5 +13,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://vector.today/sitemap.xml
-Sitemap: https://vector.today/baidusitemap.xml
+Sitemap: https://vectorzxc.cn/sitemap.xml
+Sitemap: https://vectorzxc.cn/baidusitemap.xml
