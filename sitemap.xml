@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://michaelvector.github.io/posts/c186edd8/</loc>
+    
+    <lastmod>2023-12-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://michaelvector.github.io/posts/667993d5/</loc>
     
-    <lastmod>2023-12-27</lastmod>
+    <lastmod>2023-12-30</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -30,15 +39,6 @@
   
   <url>
     <loc>https://michaelvector.github.io/posts/ce5d630c/</loc>
-    
-    <lastmod>2022-02-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://michaelvector.github.io/posts/c186edd8/</loc>
     
     <lastmod>2022-02-05</lastmod>
     
